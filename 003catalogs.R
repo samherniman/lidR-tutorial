@@ -44,13 +44,13 @@ ctg
 
 # if your machine has multiple cores, you can take advantage of those
 # replace the 4 with the number of cores you want to use:
-opt_cores(ctg) <- 8L
+opt_cores(ctg) <- 6L
 opt_cores(ctg)
 
 
 # let's have a look
 plot(ctg)
-
+# sp::spplot(ctg)
 
 # if you have any trouble, check:
 ?catalog
