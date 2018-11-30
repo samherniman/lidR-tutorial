@@ -14,12 +14,14 @@ library(raster)
 # 1 make a digital terrain model DTM --------------------------------------
 ?grid_terrain
 # This will make a digital terrain model
-# resolution should be in metres you might want to make it smaller
+# resolution (res) should be in metres. you might want to make it smaller
 # but remember that it might take longer to calculate if you do 
 # this is where you might want to take advantage of multiple cores
 
 dtm = grid_terrain(ctg, res = 100, knnidw(k=10,p=2), keep_lowest = FALSE)
 
+# you can save your dtm with:
+# writeRaster(dtm, filename = "dtm.grd", format = "raster", overwrite = T)
 
 # 2 rayshade --------------------------------------------------------------
 # making a pretty hillshade
@@ -43,9 +45,16 @@ elmat %>%
   add_shadow(lambmat, 0.7) %>% 
   plot_map()
 
+# if you want to save a copy of your hillshade, use:
+# elmat %>%
+#   sphere_shade(texture="desert") %>%
+#   add_water(detect_water(elmat, min_area = 40), color="desert") %>%
+#   add_shadow(raymat, 0.7) %>%
+#   add_shadow(ambmat, 0.7) %>%
+#   add_shadow(lambmat, 0.7) %>% 
+#   save_png(filename = "hillshadename")
 
-# %>% 
-# save_png(filename = "hrw-hill-20181002-bw")
+# you're probably ready to move on
 
 # elmat %>% 
 #   sphere_shade(texture = "desert") %>% 

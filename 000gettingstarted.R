@@ -31,3 +31,6 @@
 
 # 003catalogs.R -----------------------------------------------------------
 #     setting up catalogs and viewing your data
+
+# 004dtm-rayshader --------------------------------------------------------
+#     creating a digital terrain model and producing a hillshade
