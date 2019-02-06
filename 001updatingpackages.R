@@ -16,6 +16,9 @@
 # you're free to try it, but I haven't used it with lidR yet, and it might not work
 
 
+
+install.packages("lidR")
+
 # devtools ----------------------------------------------------------------
 
 # Next, run this line:
