@@ -23,7 +23,7 @@ library(lidR)
 
 # R isn't able to handle all the groundclassified points at once,
 # so we have to specify a place to save them
-# let's change the catalog options to where you want the ground classified 
+# let's change the catalog options to where you want the ground classified
 # data saved
 
 # replace the path\\to\\output\\folder\\ground_{XCENTER}_{YCENTER} with 
